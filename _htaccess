@@ -1,0 +1,26 @@
+RewriteEngine On
+RewriteBase /
+
+<Files .htaccess>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files *.txt>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files *.sql>
+Order Allow,Deny
+Deny from all
+</Files>
+
+<Files *.dat>
+Order Allow,Deny
+Deny from all
+</Files>
+
+ErrorDocument 403 /Examination/403.php
+ErrorDocument 404 /Examination/404.php
+Options All -Indexes
